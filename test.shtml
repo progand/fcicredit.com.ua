@@ -1,0 +1,22 @@
+<!--#include file='test.html' -->
+
+<font color="blue">
+<h3> It's a Server Side Include (SSI) documents test</h3>
+
+<!--#config timefmt="%H:%M, %B %d, %Y" -->
+<!--#exec cmd="/usr/bin/id" -->
+
+<p><!--#echo var="DOCUMENT_URI"-->:
+&nbsp;&nbsp; Last Modified &nbsp;&nbsp;
+<!--#echo var="LAST_MODIFIED" -->
+
+<!--#set var="test_var" value="test_value"-->
+<p><!--#echo var="test_var" -->
+
+<p>
+<!--#if expr="$test_var = /value/"--> <b>Yes</b>
+<!--#else --> <b>No</b>
+<!--#endif -->
+
+</body>
+</html>

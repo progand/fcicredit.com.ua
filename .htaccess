@@ -1,0 +1,39 @@
+## ¿î¿æ¿∫¡É¿º¿µ¿Ω¡Ç¡ã ¿Ω¿∞ ¿¥¿Ò¡Å¿∫¿µ ¿≤ ¿∫¿æ¿¥¿Ò¡Ä¿æ¿≤¿∫¿µ utf-8
+AddDefaultCharset utf-8
+
+## ¿î¿æ¿∫¡É¿º¿µ¿Ω¡Ç¡ã ¿Ω¿∞ ¿¥¿Ò¡Å¿∫¿µ ¿≤ ¿∫¿æ¿¥¿Ò¡Ä¿æ¿≤¿∫¿µ koi8-r
+#AddDefaultCharset koi8-r
+
+## ¿î¿æ¿∫¡É¿º¿µ¿Ω¡Ç¡ã ¿Ω¿∞ ¿¥¿Ò¡Å¿∫¿µ ¿≤ ¿∫¿æ¿¥¿Ò¡Ä¿æ¿≤¿∫¿µ koi8-u
+#AddDefaultCharset koi8-u
+
+## ¿î¿æ¿∫¡É¿º¿µ¿Ω¡Ç¡ã ¿Ω¿∞ ¿¥¿Ò¡Å¿∫¿µ ¿≤ ¿∫¿æ¿¥¿Ò¡Ä¿æ¿≤¿∫¿µ windows-1251
+#AddDefaultCharset windows-1251
+
+## ¿î¿æ¿∫¡É¿º¿µ¿Ω¡Ç¡ã ¿Ω¿∞ ¿¥¿Ò¡Å¿∫¿µ ¿≤ ¿∫¿æ¿¥¿Ò¡Ä¿æ¿≤¿∫¿µ iso-8859-1 (English, etc)
+#AddDefaultCharset iso-8859-1
+
+## ¿§¿∞¿π¿ª ¿Ò¿Ω¿¥¿µ¿∫¡Å¿Ω¿æ¿≥¿æ ¿¥¿æ¿∫¡É¿º¿µ¿Ω¡Ç¿∞
+DirectoryIndex index.php
+
+## ¿í¿æ¡Å¿ø¡Ä¿Ò¿Ω¿Ò¿º¿∞¡Ç¡å ¡Ñ¿∞¿π¿ª¡ã *.html ¿∫¿∞¿∫ SSI
+#AddHandler server-parsed .html
+
+## ¿†¿∞¿∑¡Ä¿µ¡à¿µ¿Ω¿Ò¿µ ¿ø¿æ¿∫¿∞¿∑¿∞ ¡Å¿æ¿¥¿µ¡Ä¿∂¿Ò¿º¿æ¿≥¿æ ¿∫¿∞¡Ç¿∞¿ª¿æ¿≥¿∞
+#Options +Indexes
+
+## ¿ù¿µ ¿ø¿Ò¡Å¿∞¡Ç¡å ¿≤ access.log ¿Ò¿Ω¡Ñ¿æ¡Ä¿º¿∞¡Ü¿Ò¡é ¿æ ¡Ñ¿∞¿π¿ª¿∞¡Ö *.gif ¿Ò *.jpg
+#SetEnvIf Request_URI \.gif$ access_log
+#SetEnvIf Request_URI \.jpg$ access_log
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

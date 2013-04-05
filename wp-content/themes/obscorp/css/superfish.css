@@ -1,0 +1,50 @@
+/*** Navigation (Setting up some fonts, colors and more)***/
+
+.nav {
+	
+}
+
+
+
+
+
+/*** Essential styles - Superfish menu (Setting the positions for the list elements etc.) ***/
+
+
+
+.nav, .nav * {margin:0;padding:0;list-style:none;}
+
+.nav ul {position:absolute;top:-999em;width:15em;}
+
+.nav li {float:left;position:relative;z-index:99;padding:0;}
+
+.nav a {display:block; text-decoration:none !important; }
+
+.nav ul li{width: 100%;}
+
+.nav li:hover ul,ul.nav li.sfHover ul {left:-0px;top:3em;}
+
+.nav li:hover li ul,.nav li.sfHover li ul {top:-999em; }
+
+.nav li li:hover ul,ul.nav li li.sfHover ul {left:13.8em;top:0px;}
+
+.nav li:hover ul,.nav li li:hover ul {top: -999em;}
+
+/*** Skinning - Superfish menu (Some final font colors and backgrounds) ***/
+
+.nav li li {
+width: 180px;
+background:url(../images/nav-na-bg.gif) repeat-x top left !important;
+}
+
+.nav li li a {
+width: 150px;
+background:url(../images/nav-na-bg.gif) repeat-x top left !important;
+}
+
+
+
+
+
+
+
