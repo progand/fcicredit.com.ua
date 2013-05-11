@@ -13,6 +13,10 @@ $current_layout = $options['theme_layout'];
 if ( 'content' != $current_layout ) :
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
+                    <aside id="archives" class="widget">
+			<a class="btn btn-primary btn-large" href="/administration/index.php?r=questionnaire/createOnFrontend">Оформити кредит</a>
+                    </aside>
+                    
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 				<aside id="archives" class="widget">

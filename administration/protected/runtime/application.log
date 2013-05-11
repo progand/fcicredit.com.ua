@@ -1,0 +1,750 @@
+2013/04/30 12:54:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /virt/homes/fcicredit/htdocs/administration/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CApplication.php(438): CModule->getComponent('db')
+#4 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(623): CApplication->getDb()
+#5 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Questionnaire))
+#7 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(402): CActiveRecord::model('Questionnaire')
+#8 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 /virt/homes/fcicredit/htdocs/administration/protected/controllers/QuestionnaireController.php(61): CActiveRecord->__construct()
+#10 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#11 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#18 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#20 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#21 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /virt/homes/fcicredit/htdocs/administration/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/04/30 12:54:59 [error] [exception.CException] exception 'CException' with message 'Property "Questionnaire.las_tname" is not defined.' in /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CComponent.php:130
+Stack trace:
+#0 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(143): CComponent->__get('las_tname')
+#1 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('las_tname')
+#2 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Questionnaire), 'las_tname')
+#3 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Questionnaire), 'las_tname', Array)
+#4 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Questionnaire), 'las_tname', Array)
+#5 /virt/homes/fcicredit/htdocs/administration/protected/views/questionnaire/_form.php(32): CActiveForm->textField(Object(Questionnaire), 'las_tname', Array)
+#6 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(126): require('/virt/homes/fci...')
+#7 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(95): CBaseController->renderInternal('/virt/homes/fci...', Array, true)
+#8 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(869): CBaseController->renderFile('/virt/homes/fci...', Array, true)
+#9 /virt/homes/fcicredit/htdocs/administration/protected/views/questionnaire/create_on_frontend.php(9): CController->renderPartial('_form', Array)
+#10 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(126): require('/virt/homes/fci...')
+#11 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(95): CBaseController->renderInternal('/virt/homes/fci...', Array, true)
+#12 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(869): CBaseController->renderFile('/virt/homes/fci...', Array, true)
+#13 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(782): CController->renderPartial('create_on_front...', Array, true)
+#14 /virt/homes/fcicredit/htdocs/administration/protected/controllers/QuestionnaireController.php(74): CController->render('create_on_front...', Array)
+#15 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#16 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#23 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#25 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#26 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#27 /virt/homes/fcicredit/htdocs/administration/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/04/30 13:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php:483
+Stack trace:
+#0 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(270): CController->missingAction('edit')
+#1 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(282): CController->run('edit')
+#2 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/edit')
+#3 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /virt/homes/fcicredit/htdocs/administration/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/administration/index.php?r=site/edit
+---
+2013/04/30 13:16:05 [error] [exception.CException] exception 'CException' with message 'Property "Questionnaire.las_tname" is not defined.' in /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CComponent.php:130
+Stack trace:
+#0 /virt/homes/fcicredit/htdocs/administration/protected/framework/db/ar/CActiveRecord.php(143): CComponent->__get('las_tname')
+#1 /virt/homes/fcicredit/htdocs/administration/protected/models/Questionnaire.php(110): CActiveRecord->__get('las_tname')
+#2 /virt/homes/fcicredit/htdocs/administration/protected/views/questionnaire/admin.php(45): Questionnaire->search()
+#3 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(126): require('/virt/homes/fci...')
+#4 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CBaseController.php(95): CBaseController->renderInternal('/virt/homes/fci...', Array, true)
+#5 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(869): CBaseController->renderFile('/virt/homes/fci...', Array, true)
+#6 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /virt/homes/fcicredit/htdocs/administration/protected/controllers/QuestionnaireController.php(154): CController->render('admin', Array)
+#8 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionAdmin()
+#9 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#16 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /virt/homes/fcicredit/htdocs/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/a...')
+#19 /virt/homes/fcicredit/htdocs/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /virt/homes/fcicredit/htdocs/administration/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/admin
+HTTP_REFERER=http://www.fcicredit.com.ua/administration/index.php?r=questionnaire/create
+---
+2013/05/07 19:17:36 [error] [php] include(mach.php): failed to open stream: No such file or directory (/home/user/www/fcicredit.test/www/administration/protected/framework/YiiBase.php:421)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/validators/CValidator.php(186): import()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(286): createValidator()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(260): Questionnaire->createValidators()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(546): Questionnaire->getValidators()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(467): Questionnaire->getSafeAttributeNames()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CComponent.php(152): Questionnaire->setAttributes()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(159): Questionnaire->__set()
+#7 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(88): Questionnaire->__set()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#17 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#18 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (88)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 19:18:01 [error] [php] preg_match(): No ending delimiter '^' found (/home/user/www/fcicredit.test/www/administration/protected/framework/validators/CRegularExpressionValidator.php:50)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(794): Questionnaire->validate()
+#2 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(89): Questionnaire->save()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (89)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 19:25:07 [error] [php] preg_match(): No ending delimiter '^' found (/home/user/www/fcicredit.test/www/administration/protected/framework/validators/CRegularExpressionValidator.php:50)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(794): Questionnaire->validate()
+#2 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(89): Questionnaire->save()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (89)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 19:25:11 [error] [php] preg_match(): No ending delimiter '^' found (/home/user/www/fcicredit.test/www/administration/protected/framework/validators/CRegularExpressionValidator.php:50)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(794): Questionnaire->validate()
+#2 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(89): Questionnaire->save()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (89)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 19:25:35 [error] [php] preg_match(): No ending delimiter '/' found (/home/user/www/fcicredit.test/www/administration/protected/framework/validators/CRegularExpressionValidator.php:50)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(794): Questionnaire->validate()
+#2 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(89): Questionnaire->save()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (89)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 19:27:29 [error] [php] preg_match(): No ending delimiter '^' found (/home/user/www/fcicredit.test/www/administration/protected/framework/validators/CRegularExpressionValidator.php:50)
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/db/ar/CActiveRecord.php(794): Questionnaire->validate()
+#2 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(89): Questionnaire->save()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/user/www/fcicredit.test/www/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (89)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/07 20:06:56 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "getUserHostAddress".' in /home/user/www/fcicredit.test/www/administration/protected/framework/base/CComponent.php:265
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(84): CComponent->__call('getUserHostAddr...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(84): CWebUser->getUserHostAddress()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreate()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/create
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/index
+---
+2013/05/08 08:03:36 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:03:46 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:03:56 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:04:02 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:04:46 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:06:35 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:06:39 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:06:46 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:08:45 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:09:37 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:10:10 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:10:22 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:11:55 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:12:41 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:12:51 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:21:20 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:22:30 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:23:02 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:23:05 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:23:11 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:26:17 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:26:58 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:05 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:11 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:27 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:36 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:44 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:51 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:27:58 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:06 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:14 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:18 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:23 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:27 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:31 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:36 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:47 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:28:52 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:29:19 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:01 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:15 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:24 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:30 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:53 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:36:58 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:38:25 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 08:39:23 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (90)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:03:25 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:04:27 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:04:45 [error] [exception.SoapFault] SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://webapp.rccf.ua:9084/WebRequestSvc.asmx?op=SendWebRequestData' : Extra content at the end of the document
+ in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:71
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(71): SoapClient->SoapClient('https://webapp....')
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:05:23 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:05:24 [error] [exception.SoapFault] SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://webapp.rccf.ua:9084/WebRequestSvc.asmx?op=SendWebRequestData' : Extra content at the end of the document
+ in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:71
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(71): SoapClient->SoapClient('https://webapp....')
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:07:29 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:07:32 [error] [exception.SoapFault] SoapFault exception: [soap:Server] System.Web.Services.Protocols.SoapException: Server was unable to process request. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: webRequestData
+   at Rccf.Validation.Assure.ArgumentNotNull(Object value, String argName) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Rccf\Validation\Assure.cs:line 72
+   at Rccf.BrokerSvc.Domain.Bl.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Bl\Bl.cs:line 655
+   at lambda_method(Closure )
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass1e`2.<LogMethodCall>b__1d(Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 430
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__1() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ActionPolicySamplesExtension.<LogExceptionAsInfo>b__18[TResult,TException](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 300
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass16`4.<RethrowAsAnotherException>b__15(Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 263
+   at Rccf.Aspects.FunctionPolicy.<>c__DisplayClass2`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 87
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 111
+   at Rccf.BrokerSvc.WebServices.BrokerWebServiceCallPolicy`1.Do(Expression`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\BrokerWebServiceCallPolicy.cs:line 31
+   at Rccf.BrokerSvc.WebServices.WebRequestWebService.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\WebRequestSvc.asmx.cs:line 158
+   --- End of inner exception stack trace --- in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:88
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(88): SoapClient->__soapCall('SendWebRequestD...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:08:55 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:08:57 [error] [exception.SoapFault] SoapFault exception: [soap:Server] System.Web.Services.Protocols.SoapException: Server was unable to process request. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: webRequestData
+   at Rccf.Validation.Assure.ArgumentNotNull(Object value, String argName) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Rccf\Validation\Assure.cs:line 72
+   at Rccf.BrokerSvc.Domain.Bl.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Bl\Bl.cs:line 655
+   at lambda_method(Closure )
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass1e`2.<LogMethodCall>b__1d(Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 430
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__1() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ActionPolicySamplesExtension.<LogExceptionAsInfo>b__18[TResult,TException](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 300
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass16`4.<RethrowAsAnotherException>b__15(Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 263
+   at Rccf.Aspects.FunctionPolicy.<>c__DisplayClass2`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 87
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 111
+   at Rccf.BrokerSvc.WebServices.BrokerWebServiceCallPolicy`1.Do(Expression`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\BrokerWebServiceCallPolicy.cs:line 31
+   at Rccf.BrokerSvc.WebServices.WebRequestWebService.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\WebRequestSvc.asmx.cs:line 158
+   --- End of inner exception stack trace --- in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:91
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(91): SoapClient->__soapCall('SendWebRequestD...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:17:12 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:17:15 [error] [exception.SoapFault] SoapFault exception: [soap:Server] System.Web.Services.Protocols.SoapException: Server was unable to process request. ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: webRequestData
+   at Rccf.Validation.Assure.ArgumentNotNull(Object value, String argName) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Rccf\Validation\Assure.cs:line 72
+   at Rccf.BrokerSvc.Domain.Bl.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Bl\Bl.cs:line 655
+   at lambda_method(Closure )
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass1e`2.<LogMethodCall>b__1d(Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 430
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__1() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ActionPolicySamplesExtension.<LogExceptionAsInfo>b__18[TResult,TException](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 300
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass16`4.<RethrowAsAnotherException>b__15(Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 263
+   at Rccf.Aspects.FunctionPolicy.<>c__DisplayClass2`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 87
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 111
+   at Rccf.BrokerSvc.WebServices.BrokerWebServiceCallPolicy`1.Do(Expression`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\BrokerWebServiceCallPolicy.cs:line 31
+   at Rccf.BrokerSvc.WebServices.WebRequestWebService.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\WebRequestSvc.asmx.cs:line 158
+   --- End of inner exception stack trace --- in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:108
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->__call('SendWebRequestD...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->SendWebRequestData(Array)
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:23:54 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:23:55 [error] [exception.SoapFault] SoapFault exception: [soap:Server] System.Web.Services.Protocols.SoapException: Server was unable to process request. ---> Rccf.ListOfValidationException: Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))) Сумма повинна містити тільки цифри. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))) Сумма повинна містити тільки цифри. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))) Код валюти повинен бути: UAH або USD або EUR або CHF або RUB. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))) Код валюти повинен бути: UAH або USD або EUR або CHF або RUB. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))) Не вказано або містить не тільки букви або цифри або -+(). Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))) Не вказано або містить не тільки букви або цифри або -+(). Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))) Може бути не вказано або існуючий email, Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))) Може бути не вказано або існуючий email
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))) Некоректний Ip адрес. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))) Некоректний Ip адрес. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))) Код агента повинен складатися з цифр та -. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))) Код агента повинен складатися з цифр та -. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$")))
+
+   at Rccf.BrokerSvc.Domain.ValidationRules`1.Validate(T source, Boolean throwException) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Metadata\Mapping\ValidationRules.cs:line 24
+   at Rccf.BrokerSvc.Domain.Bl.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Bl\Bl.cs:line 657
+   at lambda_method(Closure )
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass1e`2.<LogMethodCall>b__1d(Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 430
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__1() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ActionPolicySamplesExtension.<LogExceptionAsInfo>b__18[TResult,TException](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 300
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass16`4.<RethrowAsAnotherException>b__15(Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 267
+   at Rccf.Aspects.FunctionPolicy.<>c__DisplayClass2`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 87
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 111
+   at Rccf.BrokerSvc.WebServices.BrokerWebServiceCallPolicy`1.Do(Expression`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\BrokerWebServiceCallPolicy.cs:line 31
+   at Rccf.BrokerSvc.WebServices.WebRequestWebService.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\WebRequestSvc.asmx.cs:line 158
+   --- End of inner exception stack trace --- in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:108
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->__call('SendWebRequestD...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->SendWebRequestData(Array)
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:24:39 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 09:24:41 [error] [exception.SoapFault] SoapFault exception: [soap:Server] System.Web.Services.Protocols.SoapException: Server was unable to process request. ---> Rccf.ListOfValidationException: Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))) Сумма повинна містити тільки цифри. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$"))) Сумма повинна містити тільки цифри. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.RequestedAmmount, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^\d*$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))) Код валюти повинен бути: UAH або USD або EUR або CHF або RUB. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)"))) Код валюти повинен бути: UAH або USD або EUR або CHF або RUB. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.CurrencyCode, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "(^UAH$)|(^USD$)|(^EUR$)|(^CHF$)|(^RUB$)")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))) Не вказано або містить не тільки букви або цифри або -+(). Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$"))) Не вказано або містить не тільки букви або цифри або -+(). Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.ContactPhone, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^([\d\(\)\-\ \+])+$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))) Може бути не вказано або існуючий email, Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.Email, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^([A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})?$"))) Може бути не вказано або існуючий email
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))) Некоректний Ip адрес. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"))) Некоректний Ip адрес. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.VisitorIP, member => (Not(IsNullOrEmpty(member)) AndAlso IsMatch(member, "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")))
+Message: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))) Код агента повинен складатися з цифр та -. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))), Member: Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))), Exception: Rccf.ValidationException: Обов’язкове поле. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$"))) Код агента повинен складатися з цифр та -. Value = Петренко, Rule: Type: MemberValidationRule2`2. Rule<WebRequestDto,String>(d => d.AgentCode, member => (((member == null) OrElse (member == "")) OrElse IsMatch(member, "^[\d\-]*$")))
+
+   at Rccf.BrokerSvc.Domain.ValidationRules`1.Validate(T source, Boolean throwException) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Metadata\Mapping\ValidationRules.cs:line 24
+   at Rccf.BrokerSvc.Domain.Bl.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\Domain\Rccf.BrokerSvc.Domain\Bl\Bl.cs:line 657
+   at lambda_method(Closure )
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass1e`2.<LogMethodCall>b__1d(Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 430
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__1() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ActionPolicySamplesExtension.<LogExceptionAsInfo>b__18[TResult,TException](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 300
+   at Rccf.Aspects.ExpressionFunctionPolicy.<>c__DisplayClass4`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ActionPolicySamplesExtension.<>c__DisplayClass16`4.<RethrowAsAnotherException>b__15(Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\Implementations\ActionPolicySamplesExtension.cs:line 267
+   at Rccf.Aspects.FunctionPolicy.<>c__DisplayClass2`1.<Do>b__0() in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 87
+   at Rccf.Aspects.FunctionPolicy.Do[TResult](Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\FunctionPolicy.cs:line 79
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 83
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction, Func`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 88
+   at Rccf.Aspects.ExpressionFunctionPolicy.Do[TResult](Expression`1 exprAction) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Components\Aspects\Rccf.Aspects\ActionPolicy\ExpressionFunctionPolicy.cs:line 111
+   at Rccf.BrokerSvc.WebServices.BrokerWebServiceCallPolicy`1.Do(Expression`1 action) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\BrokerWebServiceCallPolicy.cs:line 31
+   at Rccf.BrokerSvc.WebServices.WebRequestWebService.SendWebRequestData(WebRequestDto webRequestData) in c:\builds\RCCFBRANCH-STAGE-JOB1\Sources\Applications\Bwm\WebServices\Integration\BrokerSvc\WebServices\Rccf.BrokerSvc.WebServices\WebRequestSvc.asmx.cs:line 158
+   --- End of inner exception stack trace --- in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php:108
+Stack trace:
+#0 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->__call('SendWebRequestD...', Array)
+#1 /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php(108): SoapClient->SendWebRequestData(Array)
+#2 /home/user/www/fcicredit.test/www/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#3 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/user/www/fcicredit.test/www/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(282): CController->run('createOnFronten...')
+#12 /home/user/www/fcicredit.test/www/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('questionnaire/c...')
+#13 /home/user/www/fcicredit.test/www/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/user/www/fcicredit.test/www/administration/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+HTTP_REFERER=http://fcicredit.test/administration/index.php?r=questionnaire/createOnFrontend
+---
+2013/05/08 09:27:06 [warning] [application] Failed to set unsafe attribute "last_edit" of "Questionnaire".
+in /home/user/www/fcicredit.test/www/administration/protected/controllers/QuestionnaireController.php (69)
+in /home/user/www/fcicredit.test/www/administration/index.php (13)
+2013/05/08 19:43:01 [error] [php] include(SoapClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/fcicredi/public_html/administration/protected/framework/YiiBase.php:421)
+Stack trace:
+#0 /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php(74): spl_autoload_call()
+#1 /home/fcicredi/public_html/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#4 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /home/fcicredi/public_html/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#11 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/fcicredi/public_html/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/fcicredi/public_html/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+in /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php (74)
+in /home/fcicredi/public_html/administration/index.php (13)
+2013/05/08 19:49:08 [error] [php] include(SoapClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/fcicredi/public_html/administration/protected/framework/YiiBase.php:421)
+Stack trace:
+#0 /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php(74): spl_autoload_call()
+#1 /home/fcicredi/public_html/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#4 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /home/fcicredi/public_html/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#11 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/fcicredi/public_html/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/fcicredi/public_html/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+in /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php (74)
+in /home/fcicredi/public_html/administration/index.php (13)
+2013/05/08 19:49:12 [error] [php] include(SoapClient.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/fcicredi/public_html/administration/protected/framework/YiiBase.php:421)
+Stack trace:
+#0 /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php(74): spl_autoload_call()
+#1 /home/fcicredi/public_html/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#2 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#4 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /home/fcicredi/public_html/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#7 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#10 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#11 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/fcicredi/public_html/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/fcicredi/public_html/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+in /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php (74)
+in /home/fcicredi/public_html/administration/index.php (13)
+2013/05/08 16:54:16 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/home/fcicredi/public_html/administration/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /home/fcicredi/public_html/administration/protected/framework/web/CBaseController.php(95): QuestionnaireController->renderInternal()
+#1 /home/fcicredi/public_html/administration/protected/framework/web/widgets/CContentDecorator.php(76): QuestionnaireController->renderFile()
+#2 /home/fcicredi/public_html/administration/protected/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /home/fcicredi/public_html/administration/protected/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /home/fcicredi/public_html/administration/protected/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /home/fcicredi/public_html/administration/protected/framework/web/CBaseController.php(300): QuestionnaireController->endWidget()
+#6 /home/fcicredi/public_html/administration/protected/views/layouts/column2.php(22): QuestionnaireController->endContent()
+#7 /home/fcicredi/public_html/administration/protected/framework/web/CBaseController.php(126): require()
+#8 /home/fcicredi/public_html/administration/protected/framework/web/CBaseController.php(95): QuestionnaireController->renderInternal()
+#9 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(784): QuestionnaireController->renderFile()
+#10 /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php(111): QuestionnaireController->render()
+#11 /home/fcicredi/public_html/administration/protected/framework/web/actions/CInlineAction.php(49): QuestionnaireController->actionCreateOnFrontend()
+#12 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(133): QuestionnaireController->runAction()
+#14 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /home/fcicredi/public_html/administration/protected/framework/web/filters/CInlineFilter.php(58): QuestionnaireController->filterAccessControl()
+#17 /home/fcicredi/public_html/administration/protected/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/fcicredi/public_html/administration/protected/framework/web/CController.php(265): QuestionnaireController->runActionWithFilters()
+#20 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(282): QuestionnaireController->run()
+#21 /home/fcicredi/public_html/administration/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /home/fcicredi/public_html/administration/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /home/fcicredi/public_html/administration/index.php(13): CWebApplication->run()
+REQUEST_URI=/administration/index.php?r=questionnaire/createOnFrontend
+in /home/fcicredi/public_html/administration/protected/views/layouts/main.php (52)
+in /home/fcicredi/public_html/administration/protected/views/layouts/column2.php (22)
+in /home/fcicredi/public_html/administration/protected/controllers/QuestionnaireController.php (111)
