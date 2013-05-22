@@ -20,6 +20,7 @@
  * @property string $source_url
  * @property string $agent_code
  * @property string $web_request_id
+ * @property string $city
  */
 class Questionnaire extends CActiveRecord
 {
@@ -66,7 +67,9 @@ class Questionnaire extends CActiveRecord
 			array('visitor_ip', 'match', 'pattern'=>'/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/', 'message'=>'Ip вдвідувача містить недопустимі символи.'),
 			array('source_url', 'match', 'pattern'=>'/^.*$/', 'message'=>'URL джерела містить недопустимі символи.'),
 			array('agent_code', 'match', 'pattern'=>'/^[\\d\\-]*$/', 'message'=>'Код агента містить недопустимі символи.'),
-			// The following rule is used by search().
+			array('city', 'match', 'pattern'=>"/^([а-яА-ЯіІєЄїЇ,\\ \\-'`])+$/u", 'message'=>'Місто містить недопустимі символи.'),
+                        
+                        // The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, last_edit, first_name, last_name, middle_name, product_type, requested_ammount, currency_code, term_string, contact_phone, email, contact_time_string, visitor_ip, source_url, agent_code', 'safe', 'on'=>'search'),
 		);
@@ -105,6 +108,7 @@ class Questionnaire extends CActiveRecord
 			'source_url' => 'Url джерела',
 			'agent_code' => 'Код агента',
                         'web_request_id' => 'Номер заявки',
+                        'city' => 'Місто',
 		);
 	}
 
@@ -135,6 +139,7 @@ class Questionnaire extends CActiveRecord
 		$criteria->compare('source_url',$this->source_url,true);
 		$criteria->compare('agent_code',$this->agent_code,true);
                 $criteria->compare('web_request_id',$this->web_request_id,true);
+                $criteria->compare('city',$this->city,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
