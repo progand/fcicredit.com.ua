@@ -98,7 +98,7 @@ class Questionnaire extends CActiveRecord
 			'last_name' => 'Прізвище',
 			'middle_name' => 'По-батькові',
 			'product_type' => 'Продукт',
-			'requested_ammount' => 'Сума',
+			'requested_ammount' => 'Бажана сума кредиту',
 			'currency_code' => 'Валюта',
 			'term_string' => 'Строк',
 			'contact_phone' => 'Контактний телефон',

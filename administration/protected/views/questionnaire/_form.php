@@ -84,7 +84,7 @@
     </div>
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Оформити' : 'Зберегти'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Замовити кредит' : 'Зберегти'); ?>
     </div>
 
     <?php $this->endWidget(); ?>
