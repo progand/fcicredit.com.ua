@@ -58,6 +58,7 @@ class QuestionnaireController extends Controller {
     }
 
     public function actionCreateOnFrontend() {
+        $this->pageTitle = "Заявка на оформлення кредиту";
         $model = new Questionnaire;
         $model->agent_code = 10426;
         $model->visitor_ip = Yii::app()->getRequest()->getUserHostAddress();
