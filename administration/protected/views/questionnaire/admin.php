@@ -47,12 +47,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'last_edit',
-		'first_name',
-		'last_name',
+                'last_name',
+		'first_name',		
 		'middle_name',
-		'product_type',
+		'city',
+                'requested_ammount',
 		/*
-		'requested_ammount',
+                'product_type',		
 		'currency_code',
 		'term_string',
 		'contact_phone',
