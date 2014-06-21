@@ -4,15 +4,15 @@
 ?>
 <link rel="stylesheet" type="text/css" href="/administration/css/questionare_frontend_form.css">
 <style type="text/css">
-    
+
 </style>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-    jQuery(function() {   
-    jQuery("#show-error-details").click(function(){
-    jQuery("#error-details").toggle();
-    return false;
-    });
+    jQuery(function() {
+        jQuery("#show-error-details").click(function() {
+            jQuery("#error-details").toggle();
+            return false;
+        });
     });
 </script>
 <h1>Заявка на оформлення кредиту</h1>
@@ -49,25 +49,34 @@
 }
 ?>
 
-    <hr>
-<h2>Три простих кроки до отримання кредиту:</h2>
-<ol>
-    <li>Заповнити анкету</li>
-    <li>Очікувати дзвінок. Вам передзвонить наш спеціаліст, проконсультує та надасть попереднє рішення за кредитом</li>
-    <li>Прийти до найближчого до Вас відділення та отримати готівку.</li>
-</ol>
 
-<h2>Основні умови:</h2>
-<ul>
-    <li>кредит - на будь-які цілі</li>
-    <li>вік: від 21 до 75 років</li>
-    <li>працевлаштування (офіційно або ні)</li>
-</ul>
+<div class="form-sidebar">
+    <h2>Три простих кроки до отримання кредиту:</h2>
+    <div class="form-sidebar-block-content">
+        <ol>
+            <li>Заповнити анкету</li>
+            <li>Очікувати дзвінок. Вам передзвонить наш спеціаліст, проконсультує та надасть попереднє рішення за кредитом</li>
+            <li>Прийти до найближчого до Вас відділення та отримати готівку.</li>
+        </ol>
+    </div>
 
-<h2>Документи для отримання:</h2>
-<ul>
-    <li>паспорт</li>
-    <li>код ІПН</li>
-    <li>пенсійне посвідчення для пенсіонерів</li>
-    <li>довідка про доходи (за бажанням)</li>
-</ul>
+    <h2>Основні умови:</h2>
+    <div class="form-sidebar-block-content">
+        <ul>
+            <li>кредит - на будь-які цілі</li>
+            <li>вік: від 21 до 75 років</li>
+            <li>працевлаштування (офіційно або ні)</li>
+        </ul>
+    </div>
+
+    <h2>Документи для отримання:</h2>
+    <div class="form-sidebar-block-content">
+        <ul>
+            <li>паспорт</li>
+            <li>код ІПН</li>
+            <li>пенсійне посвідчення для пенсіонерів</li>
+            <li>довідка про доходи (за бажанням)</li>
+        </ul>
+    </div>
+</div>
+
