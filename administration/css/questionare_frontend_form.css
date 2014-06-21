@@ -66,8 +66,7 @@ select{
 }
 input[type=submit]{
     padding: 15px;
-    border: none;
-    font-weight: bold;
+    border: none;    
     font-size: 1.5em;
     color: white;
     background: url(../images/from-submit-background.jpg) repeat;
