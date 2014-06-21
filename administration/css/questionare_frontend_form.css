@@ -48,6 +48,7 @@ h1 {
 }
 
 input[type=text],
+input[type=email],
 select{
     line-height: 2em;
     border-radius: 10px;
@@ -56,8 +57,18 @@ select{
 }
 input[type=submit]{
     padding: 15px;
+    border: none;
     font-weight: bold;
     font-size: 1.5em;
-    color: green;
+    color: white;
+    background: url(../images/from-submit-background.jpg) repeat;
+}
+input[type=submit]:hover,
+input[type=submit]:active{
+    background: url(../images/from-submit-background-hover.jpg) repeat;
+}
+input[type=submit]:active{
+    box-shadow: 1px 2px 5px 0 #000;
+    color: whitesmoke;
 }
 
