@@ -74,7 +74,7 @@ class QuestionnaireController extends Controller {
             if ($model->validate()) {
                 try {
                     //$wsdl = file_get_contents('https://85.223.138.23:9084/WebRequestSvc.asmx?WSDL');
-                    $client = new SoapClient('https://85.223.138.23:9084/WebRequestSvc.asmx?WSDL');
+                    /*$client = new SoapClient('https://85.223.138.23:9084/WebRequestSvc.asmx?WSDL');
 
                     $result = $client->SendWebRequestData(array(
                         "webRequestData" => array(
@@ -94,7 +94,8 @@ class QuestionnaireController extends Controller {
                         ))
                     );
 
-                    $model->web_request_id = $result->SendWebRequestDataResult->WebRequestId;
+                    $model->web_request_id = $result->SendWebRequestDataResult->WebRequestId;*/
+		    $model->web_request_id = "";
 
                     if ($model->save()) {
                         //$this->redirect(array('view', 'id' => $model->id));
@@ -102,7 +103,7 @@ class QuestionnaireController extends Controller {
                     }
                 } catch (Exception $exc) {
                     //echo $exc->getMessage();                    
-                    $exception = $exc;
+                    //$exception = $exc;
                 }
             }
         }
