@@ -50,6 +50,13 @@ h1, h2{
 }
 
 input[type=text],
+input[type=email]{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type=text],
 input[type=email],
 select{
     line-height: 2em;
