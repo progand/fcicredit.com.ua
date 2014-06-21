@@ -1,0 +1,40 @@
+input[type=submit]{
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: green;
+}
+#header, 
+#footer, 
+#mainmenu{
+    display: none !important;
+}
+#error-details{
+    display: none;
+}
+
+#page{
+    margin: 0;
+    background: url(../images/content_bg.jpg) repeat;
+    font: 13px Helvetica,Arial,Sans-Serif;
+    color: #797979;
+    font-style: normal;
+    height: 100%;
+    width: 100%;
+    line-height: 20px;
+}
+
+.span-19{
+    width: auto;
+    float: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.1em;
+    line-height: 60px;
+    color: rgb(77, 17, 17);
+    border-top: 1px #797979 dashed;
+    border-bottom: 1px #797979 dashed;
+}
+

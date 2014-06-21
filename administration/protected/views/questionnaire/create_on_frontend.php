@@ -2,26 +2,13 @@
 /* @var $this QuestionnaireController */
 /* @var $model Questionnaire */
 ?>
-
+<link rel="stylesheet" type="text/css" href="/administration/css/questionare_frontend_form.css">
 <style type="text/css">
-    input[type=submit]{
-        padding: 15px;
-        font-weight: bold;
-        font-size: 1.5em;
-        color: green;
-    }
-    #header, #footer, #mainmenu{
-        display: none !important;
-    }
-    #error-details{
-        display: none;
-    }
+    
 </style>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-    jQuery(function() {
-    jQuery("#header").add("#footer").add("#mainmenu").hide();
-    jQuery("#error-details").hide();
+    jQuery(function() {   
     jQuery("#show-error-details").click(function(){
     jQuery("#error-details").toggle();
     return false;
