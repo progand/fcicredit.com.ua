@@ -8,6 +8,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('city')); ?>:</b>
+	<?php echo CHtml::encode($data->city); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('last_edit')); ?>:</b>
 	<?php echo CHtml::encode($data->last_edit); ?>
@@ -23,6 +27,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('middle_name')); ?>:</b>
 	<?php echo CHtml::encode($data->middle_name); ?>
+	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('contact_phone')); ?>:</b>
+	<?php echo CHtml::encode($data->contact_phone); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('product_type')); ?>:</b>
@@ -40,11 +48,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('term_string')); ?>:</b>
 	<?php echo CHtml::encode($data->term_string); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_phone')); ?>:</b>
-	<?php echo CHtml::encode($data->contact_phone); ?>
-	<br />
+	<br />	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>

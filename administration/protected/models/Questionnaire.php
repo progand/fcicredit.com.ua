@@ -92,8 +92,8 @@ class Questionnaire extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'last_edit' => 'Last Edit',
+			'id' => '№',
+			'last_edit' => 'Коли зареєстровано',
 			'first_name' => 'Ім’я',
 			'last_name' => 'Прізвище',
 			'middle_name' => 'По-батькові',
