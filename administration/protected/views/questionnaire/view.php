@@ -27,6 +27,7 @@ $this->menu=array(
 		'first_name',
 		'last_name',
 		'middle_name',
+                'city',
 		'product_type',
 		'requested_ammount',
 		'currency_code',
