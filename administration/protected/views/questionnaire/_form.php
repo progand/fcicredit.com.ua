@@ -43,7 +43,9 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'product_type'); ?>
-        <?php echo $form->dropDownList($model, 'product_type', array('Кредит' => 'Кредит')); ?>
+        <?php echo $form->dropDownList($model, 'product_type', array('Кредит' => 'Кредит', 
+            'Кредитна карта' => 'Кредитна карта', 'Автокредит' => 'Автокредит', 
+            'Кредит на житло' => 'Кредит на житло', 'Мікрокредит' => 'Мікрокредит')); ?>
         <?php echo $form->error($model, 'product_type'); ?>
     </div>
 
