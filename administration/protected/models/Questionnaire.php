@@ -50,7 +50,7 @@ class Questionnaire extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('first_name, last_name, , product_type, requested_ammount, currency_code, term_string, contact_phone, email, contact_time_string, visitor_ip, source_url, agent_code', 'required'),
+			array('first_name, last_name, , product_type, requested_ammount, currency_code, term_string, contact_phone, contact_time_string, visitor_ip, source_url, agent_code', 'required'),
 			array('first_name, last_name, middle_name, product_type, requested_ammount, term_string, contact_phone, email, contact_time_string, visitor_ip, agent_code', 'length', 'max'=>255),
 			array('currency_code', 'length', 'max'=>50),
 			array('source_url', 'length', 'max'=>500),
