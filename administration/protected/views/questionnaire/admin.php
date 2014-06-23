@@ -51,12 +51,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'first_name',		
 		'middle_name',
 		'city',
+                'contact_phone',
                 'requested_ammount',
 		/*
                 'product_type',		
 		'currency_code',
 		'term_string',
-		'contact_phone',
+		
 		'email',
 		'contact_time_string',
 		'visitor_ip',
